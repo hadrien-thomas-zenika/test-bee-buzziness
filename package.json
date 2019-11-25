@@ -1,0 +1,35 @@
+{
+  "name": "test-bee-buzziness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/app.js",
+    "lint": "tslint tslint.json --format msbuild",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadrien-thomas-zenika/test-bee-buzziness.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hadrien-thomas-zenika/test-bee-buzziness/issues"
+  },
+  "homepage": "https://github.com/hadrien-thomas-zenika/test-bee-buzziness#readme",
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "express": "^4.17.1",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/supertest": "^2.0.8",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1"
+  }
+}

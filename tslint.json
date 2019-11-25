@@ -1,0 +1,17 @@
+{
+  "extends": "tslint:all",
+  "rules": {
+    "indent": [
+      true,
+      "tabs",
+      4
+    ],
+    "no-console": false,
+    "no-inferrable-types": false,
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
+    "linebreak-style": false
+  }
+}
