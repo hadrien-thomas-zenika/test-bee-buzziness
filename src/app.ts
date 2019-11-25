@@ -13,15 +13,18 @@ app.get("/", (req: express.Request, res: express.Response) => {
 	res.send("Hello world!");
 });
 
-app.get("/convert/:digitalNumber", (req: express.Request, res: express.Response) => {
+app.get("/convert/:number", (req: express.Request, res: express.Response) => {
 
-	const lcdNumber: LcdNumber = lcdConversionService.convert(
-		parseInt(req.params.digitalNumber, 10),
+	const numberAsString: string = req.params.number;
+	const lcdNumbers: LcdNumber[] = lcdConversionService.convert(
+		numberAsString
+		.split("")
+		.map((digitAsString: string) => parseInt(digitAsString, 10)),
 	);
 
 	console.log(
 		consoleDisplayService.display(
-			lcdNumber,
+			lcdNumbers,
 		),
 	);
 

@@ -24,8 +24,8 @@ export class LcdConversionService {
 			" _|",
 		),
 		new LcdNumber(
-			"|_|",
 			"   ",
+			"|_|",
 			"  |",
 		),
 		new LcdNumber(
@@ -54,6 +54,6 @@ export class LcdConversionService {
 			"  |",
 		),
 	];
-	public convert = (digitalNumber: number): LcdNumber =>
-		this.conversionTable[digitalNumber]
+	public convert = (digits: number[]): LcdNumber[] =>
+		digits.map((digit: number) => this.conversionTable[digit])
 }
