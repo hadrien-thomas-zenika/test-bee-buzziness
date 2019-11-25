@@ -1,4 +1,4 @@
-export class LcdNumber {
+export class LcdDigit {
 	public readonly firstRow: string;
 	public readonly secondRow: string;
 	public readonly thirdRow: string;

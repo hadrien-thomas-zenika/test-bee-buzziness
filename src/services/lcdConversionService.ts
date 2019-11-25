@@ -1,59 +1,59 @@
-import { LcdNumber } from "./lcdNumber";
+import { LcdDigit } from "./lcdDigit";
 
 export class LcdConversionService {
 
-	private readonly conversionTable: LcdNumber [] = [
-		new LcdNumber(
+	private readonly conversionTable: LcdDigit [] = [
+		new LcdDigit(
 			" _ ",
 			"| |",
 			"|_|",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			"   ",
 			"  |",
 			"  |",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			" _ ",
 			" _|",
 			"|_ ",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			" _ ",
 			" _|",
 			" _|",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			"   ",
 			"|_|",
 			"  |",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			" _ ",
 			"|_ ",
 			" _|",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			" _ ",
 			"|_ ",
 			"|_|",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			" _ ",
 			"  |",
 			"  |",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			" _ ",
 			"|_|",
 			"|_|",
 		),
-		new LcdNumber(
+		new LcdDigit(
 			" _ ",
 			"|_|",
 			"  |",
 		),
 	];
-	public convert = (digits: number[]): LcdNumber[] =>
+	public convert = (digits: number[]): LcdDigit[] =>
 		digits.map((digit: number) => this.conversionTable[digit])
 }

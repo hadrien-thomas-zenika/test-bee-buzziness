@@ -1,5 +1,5 @@
 import { LcdConversionService } from "./lcdConversionService";
-import { LcdNumber } from "./lcdNumber";
+import { LcdDigit } from "./lcdDigit";
 
 describe("LcdConversionService", () => {
 
@@ -15,12 +15,12 @@ describe("LcdConversionService", () => {
 			0,
 		];
 
-		const expectedLcdNumbers: LcdNumber[] = [
-			new LcdNumber(" _ ", "| |", "|_|"),
+		const expectedLcdDigits: LcdDigit[] = [
+			new LcdDigit(" _ ", "| |", "|_|"),
 		];
 
 		expect(lcdConversionService.convert(digits))
-			.toEqual(expectedLcdNumbers);
+			.toEqual(expectedLcdDigits);
 	});
 
 	it("should display 9 to lcd format", () => {
@@ -29,24 +29,24 @@ describe("LcdConversionService", () => {
 			9,
 		];
 
-		const expectedLcdNumbers: LcdNumber[] = [
-			new LcdNumber(" _ ", "|_|", "  |"),
+		const expectedLcdDigits: LcdDigit[] = [
+			new LcdDigit(" _ ", "|_|", "  |"),
 		];
 
 		expect(lcdConversionService.convert(digits))
-			.toEqual(expectedLcdNumbers);
+			.toEqual(expectedLcdDigits);
 	});
 
 	it("should display 12 to lcd format", () => {
 
 		const digitsToConvert: number[] = [1, 2];
 
-		const expectedLcdNumbers: LcdNumber[] = [
-			new LcdNumber("   ", "  |", "  |"),
-			new LcdNumber(" _ ", " _|", "|_ "),
+		const expectedLcdDigits: LcdDigit[] = [
+			new LcdDigit("   ", "  |", "  |"),
+			new LcdDigit(" _ ", " _|", "|_ "),
 		];
 
 		expect(lcdConversionService.convert(digitsToConvert))
-			.toEqual(expectedLcdNumbers);
+			.toEqual(expectedLcdDigits);
 	});
 });
