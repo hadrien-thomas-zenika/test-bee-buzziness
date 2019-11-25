@@ -1,12 +1,12 @@
 import express from "express";
-import { HtmlConversionService } from "./services/htmlConversionService";
+import { HtmlDisplayService } from "./services/htmlDisplayService";
 
 import { LcdConversionService } from "./services/lcdConversionService";
 
 export const app: express.Application = express();
 
 const lcdConversionService: LcdConversionService = new LcdConversionService();
-const htmlConversionService: HtmlConversionService = new HtmlConversionService();
+const htmlDisplayService: HtmlDisplayService = new HtmlDisplayService();
 
 app.get("/", (req: express.Request, res: express.Response) => {
 	res.send("Hello world!");
@@ -14,7 +14,7 @@ app.get("/", (req: express.Request, res: express.Response) => {
 
 app.get("/convert/:digitalNumber", (req: express.Request, res: express.Response) => {
 	res.send(
-		htmlConversionService.convert(
+		htmlDisplayService.display(
 			lcdConversionService.convert(
 				parseInt(req.params.digitalNumber, 10),
 			),

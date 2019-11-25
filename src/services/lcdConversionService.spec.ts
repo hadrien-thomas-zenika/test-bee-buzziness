@@ -1,4 +1,5 @@
 import { LcdConversionService } from "./lcdConversionService";
+import { LcdNumber } from "./lcdNumber";
 
 describe("LcdConversionService", () => {
 
@@ -8,12 +9,11 @@ describe("LcdConversionService", () => {
 		lcdConversionService = new LcdConversionService();
 	});
 
-	it("should convert 0 to lcd format", () => {
+	it("should display 0 to lcd format", () => {
 
 		const numberToConvert: number = 0;
 
-		const expectedConversion: string =
-			" _ \n| |\n|_|";
+		const expectedConversion: LcdNumber = new LcdNumber(" _ ", "| |", "|_|");
 
 		expect(lcdConversionService.convert(numberToConvert))
 			.toEqual(expectedConversion);

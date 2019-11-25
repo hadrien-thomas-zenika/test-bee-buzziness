@@ -14,7 +14,7 @@ describe("App", () => {
 			.toEqual(expectedStatus);
 	});
 
-	it("should convert 0 to lcd format", async () => {
+	it("should display 0 to lcd format", async () => {
 
 		const numberToConvert: number = 0;
 

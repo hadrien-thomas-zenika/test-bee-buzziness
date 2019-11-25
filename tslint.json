@@ -13,6 +13,7 @@
       "dev"
     ],
     "linebreak-style": false,
-    "completed-docs": false
+    "completed-docs": false,
+    "no-magic-numbers": false
   }
 }
