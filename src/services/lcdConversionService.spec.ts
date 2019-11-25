@@ -18,4 +18,14 @@ describe("LcdConversionService", () => {
 		expect(lcdConversionService.convert(numberToConvert))
 			.toEqual(expectedConversion);
 	});
+
+	it("should display 9 to lcd format", () => {
+
+		const numberToConvert: number = 9;
+
+		const expectedConversion: LcdNumber = new LcdNumber(" _ ", "|_|", "  |");
+
+		expect(lcdConversionService.convert(numberToConvert))
+			.toEqual(expectedConversion);
+	});
 });

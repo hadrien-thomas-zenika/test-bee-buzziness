@@ -4,12 +4,12 @@ export class LcdNumber {
 	public readonly thirdRow: string;
 
 	public constructor(
-		firstRow: string,
-		secondRow: string,
-		thirdRow: string,
+		row1: string,
+		row2: string,
+		row3: string,
 	) {
-		this.firstRow = firstRow;
-		this.secondRow = secondRow;
-		this.thirdRow = thirdRow;
+		this.firstRow = row1;
+		this.secondRow = row2;
+		this.thirdRow = row3;
 	}
 }

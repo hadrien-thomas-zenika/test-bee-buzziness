@@ -1,11 +1,59 @@
 import { LcdNumber } from "./lcdNumber";
 
 export class LcdConversionService {
-	public convert = (digitalNumber: number): LcdNumber => {
-		const firstRow: string = " _ ";
-		const secondRow: string = "| |";
-		const thirdRow: string = "|_|";
 
-		return new LcdNumber(firstRow, secondRow, thirdRow);
-	}
+	private readonly conversionTable: LcdNumber [] = [
+		new LcdNumber(
+			" _ ",
+			"| |",
+			"|_|",
+		),
+		new LcdNumber(
+			"   ",
+			"  |",
+			"  |",
+		),
+		new LcdNumber(
+			" _ ",
+			" _|",
+			"|_ ",
+		),
+		new LcdNumber(
+			" _ ",
+			" _|",
+			" _|",
+		),
+		new LcdNumber(
+			"|_|",
+			"   ",
+			"  |",
+		),
+		new LcdNumber(
+			" _ ",
+			"|_ ",
+			" _|",
+		),
+		new LcdNumber(
+			" _ ",
+			"|_ ",
+			"|_|",
+		),
+		new LcdNumber(
+			" _ ",
+			"  |",
+			"  |",
+		),
+		new LcdNumber(
+			" _ ",
+			"|_|",
+			"|_|",
+		),
+		new LcdNumber(
+			" _ ",
+			"|_|",
+			"  |",
+		),
+	];
+	public convert = (digitalNumber: number): LcdNumber =>
+		this.conversionTable[digitalNumber]
 }
