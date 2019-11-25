@@ -12,6 +12,7 @@
       true,
       "dev"
     ],
-    "linebreak-style": false
+    "linebreak-style": false,
+    "completed-docs": false
   }
 }

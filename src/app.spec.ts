@@ -13,4 +13,21 @@ describe("App", () => {
 		expect(result.status)
 			.toEqual(expectedStatus);
 	});
+
+	it("should convert 0 to lcd format", async () => {
+
+		const numberToConvert: number = 0;
+
+		const expectedConversion: string =
+			" _ <br>| |<br>|_|";
+
+		const result: request.Response = await request(app)
+			.get(`/convert/${numberToConvert}`);
+
+		const expectedStatus: number = 200;
+		expect(result.text)
+			.toEqual(expectedConversion);
+		expect(result.status)
+			.toEqual(expectedStatus);
+	});
 });
