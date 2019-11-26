@@ -20,8 +20,6 @@
   },
   "homepage": "https://github.com/hadrien-thomas-zenika/test-bee-buzziness#readme",
   "dependencies": {
-    "@types/express": "^4.17.2",
-    "express": "^4.17.1",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
